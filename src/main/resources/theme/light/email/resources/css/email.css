@@ -1,0 +1,146 @@
+body, table, td, p, a, span {
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+a {
+  color: #2563eb;
+}
+
+img {
+  border: 0;
+  display: block;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+}
+
+.kc-email-shell {
+  width: 100%;
+  background: #eef4fb;
+}
+
+.kc-email-card {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border: 1px solid #d7e3f1;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.kc-email-branding {
+  padding: 32px 32px 16px;
+}
+
+.kc-email-content {
+  padding: 0 32px 32px;
+}
+
+.kc-email-title {
+  margin: 0;
+  color: #18212f;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-email-lead,
+.kc-email-content p,
+.kc-email-footer,
+.kc-email-meta,
+.kc-email-code {
+  color: #516174;
+}
+
+.kc-email-content p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.kc-email-lead {
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.kc-email-button {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.kc-email-code {
+  margin: 20px 0;
+  padding: 18px 20px;
+  border: 1px solid #d7e3f1;
+  border-radius: 16px;
+  background: #f8fbff;
+  color: #18212f;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-align: center;
+}
+
+.kc-email-footer {
+  padding: 24px 32px 32px;
+  border-top: 1px solid #d7e3f1;
+  background: #f8fbff;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.kc-email-footer a {
+  color: #2563eb !important;
+  text-decoration: none;
+}
+
+.kc-email-separator {
+  margin: 0 8px;
+  color: #b6c6da;
+}
+
+@media only screen and (max-width: 640px) {
+  .kc-email-shell {
+    padding: 16px !important;
+  }
+
+  .kc-email-card {
+    border-radius: 18px !important;
+  }
+
+  .kc-email-branding,
+  .kc-email-content,
+  .kc-email-footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .kc-email-title {
+    font-size: 24px !important;
+  }
+
+  .kc-email-content p,
+  .kc-email-lead {
+    font-size: 15px !important;
+  }
+
+  .kc-email-button {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .kc-email-code {
+    font-size: 24px !important;
+    letter-spacing: 0.14em !important;
+  }
+}

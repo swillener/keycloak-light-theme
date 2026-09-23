@@ -9,6 +9,7 @@ Production-ready light Keycloak theme for **Keycloak 26.4.5** packaged as a **JA
 - Account theme with a light loading shell
 - Admin theme with a light loading shell
 - Shared light-theme styles for consistent colors, spacing, and focus states
+- Email theme with responsive HTML and text templates for Keycloak account and event notifications
 
 ## Build
 
@@ -30,6 +31,7 @@ target/keycloak-light-theme-1.0.0.jar
    - **Login Theme:** `light`
    - **Account Theme:** `light`
    - **Admin Console Theme:** `light`
+   - **Email Theme:** `light`
 
 ## Project structure
 
@@ -40,8 +42,19 @@ src/main/resources/
     ├── admin/
     ├── account/
     ├── common/
+    ├── email/
     └── login/
 ```
+
+## Email theme configuration
+
+The email theme reads branding and footer values from `/src/main/resources/theme/light/email/theme.properties`. You can adjust:
+
+- `kcEmailBrandName`
+- `kcEmailLogoUrl` and `kcEmailLogoWidth`
+- `kcEmailAccentColor` / `kcEmailAccentColorStrong`
+- `kcEmailSupportAddress`
+- `kcEmailFooterLink1..3Label` and `kcEmailFooterLink1..3Url`
 
 ## Notes
 
