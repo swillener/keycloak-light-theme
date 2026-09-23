@@ -1,0 +1,181 @@
+@import "../../../common/resources/css/common.css";
+
+#keycloak-bg {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 24%),
+    radial-gradient(circle at right, rgba(125, 211, 252, 0.20), transparent 22%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+}
+
+.pf-v5-c-login__container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.pf-v5-c-login__header {
+  padding: 2rem 0 1.25rem;
+}
+
+.pf-v5-c-brand {
+  color: var(--kc-color-text);
+  font-weight: 700;
+}
+
+.keycloak-light-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.keycloak-light-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--kc-radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.68));
+  box-shadow: var(--kc-shadow-soft);
+  backdrop-filter: blur(14px);
+}
+
+.keycloak-light-hero__title {
+  margin: 0;
+  color: var(--kc-color-text);
+  font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+  line-height: 1.1;
+}
+
+.keycloak-light-hero__list {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.keycloak-light-hero__list li {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--kc-color-border);
+  border-radius: var(--kc-radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--kc-color-text-muted);
+}
+
+.keycloak-light-hero__list strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--kc-color-text);
+}
+
+.keycloak-light-card {
+  border-radius: var(--kc-radius-lg);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: var(--kc-shadow-card);
+}
+
+.pf-v5-c-login__main {
+  overflow: hidden;
+}
+
+.pf-v5-c-login__main-header,
+.pf-v5-c-login__main-body,
+.pf-v5-c-login__main-footer {
+  background: transparent;
+}
+
+.pf-v5-c-login__main-header {
+  padding: 2rem 2rem 0;
+}
+
+.pf-v5-c-login__main-body,
+.pf-v5-c-login__main-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pf-v5-c-login__main-body {
+  padding-bottom: 1.5rem;
+}
+
+.pf-v5-c-login__main-footer {
+  padding-bottom: 2rem;
+}
+
+.pf-v5-c-form-control,
+.pf-v5-c-form__select,
+#login-select-toggle,
+.pf-v5-c-input-group > .pf-v5-c-input-group__item > .pf-v5-c-form-control {
+  border-color: var(--kc-color-border-strong);
+  border-radius: var(--kc-radius-sm);
+  background: var(--kc-color-surface);
+  color: var(--kc-color-text);
+  box-shadow: none;
+}
+
+.pf-v5-c-form-control:focus,
+.pf-v5-c-form-control:focus-visible,
+#login-select-toggle:focus,
+#login-select-toggle:focus-visible {
+  border-color: var(--kc-color-primary);
+}
+
+.pf-v5-c-button.pf-m-primary {
+  border-color: var(--kc-color-primary);
+  background: linear-gradient(135deg, var(--kc-color-primary), #3b82f6);
+}
+
+.pf-v5-c-button.pf-m-primary:hover,
+.pf-v5-c-button.pf-m-primary:focus-visible {
+  background: linear-gradient(135deg, var(--kc-color-primary-strong), var(--kc-color-primary));
+}
+
+.pf-v5-c-button.pf-m-secondary {
+  border-color: var(--kc-color-border-strong);
+  background: var(--kc-color-surface-muted);
+  color: var(--kc-color-text);
+}
+
+.pf-v5-c-alert {
+  border-radius: var(--kc-radius-sm);
+}
+
+.pf-v5-c-login__main-footer-band {
+  border-radius: var(--kc-radius-md);
+  background: var(--kc-color-surface-muted);
+}
+
+.kc-feedback-text,
+.pf-v5-c-helper-text__item-text,
+.pf-v5-c-login__main-footer-helper-text {
+  color: var(--kc-color-text-muted);
+}
+
+@media (max-width: 992px) {
+  .keycloak-light-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .keycloak-light-hero {
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .pf-v5-c-login__container {
+    width: min(100%, calc(100% - 1rem));
+  }
+
+  .pf-v5-c-login__main-header,
+  .pf-v5-c-login__main-body,
+  .pf-v5-c-login__main-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .keycloak-light-hero {
+    padding: 1.5rem;
+  }
+}

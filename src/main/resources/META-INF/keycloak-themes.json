@@ -1,0 +1,13 @@
+{
+  "themes": [
+    {
+      "name": "light",
+      "types": [
+        "login",
+        "account",
+        "admin",
+        "common"
+      ]
+    }
+  ]
+}
