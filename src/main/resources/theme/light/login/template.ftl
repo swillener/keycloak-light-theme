@@ -44,6 +44,7 @@
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
         </#list>
     </#if>
+    <link href="${url.resourcesCommonPath}/css/common.css" rel="stylesheet" />
     <#if properties.styles?has_content>
         <#list properties.styles?split(' ') as style>
             <link href="${url.resourcesPath}/${style}" rel="stylesheet" />
@@ -107,7 +108,7 @@
         </script>
     </#if>
     <script>
-      const isFirefox = true;
+      const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
     </script>
 </head>
 

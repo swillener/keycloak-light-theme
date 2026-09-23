@@ -38,6 +38,7 @@
       <script type="module" src="${devServerUrl}/@vite/client"></script>
       <script type="module" src="${devServerUrl}/src/main.tsx"></script>
     </#if>
+    <link rel="stylesheet" href="${resourceCommonUrl}/css/common.css">
     <#if entryStyles?has_content>
       <#list entryStyles as style>
         <link rel="stylesheet" href="${resourceUrl}/${style}">
