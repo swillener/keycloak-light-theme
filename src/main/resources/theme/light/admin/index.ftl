@@ -69,7 +69,7 @@
         <div class="keycloak-light-loader">
           <div class="keycloak-light-loader__panel" role="status" aria-live="polite">
             <span class="keycloak-light-badge">Administration Console</span>
-            <svg class="pf-v5-c-spinner pf-m-xl" role="progressbar" aria-valuetext="Loading..." viewBox="0 0 100 100" aria-label="Loading">
+            <svg class="pf-v5-c-spinner pf-m-xl" viewBox="0 0 100 100" aria-hidden="true">
               <circle class="pf-v5-c-spinner__path" cx="50" cy="50" r="45" fill="none"></circle>
             </svg>
             <h1 class="keycloak-light-loader__title" id="loading-text">Loading the Administration Console</h1>

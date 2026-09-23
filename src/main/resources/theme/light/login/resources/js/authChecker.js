@@ -57,7 +57,10 @@ function getSession() {
 
 function getCookieByName(name) {
   for (const cookie of document.cookie.split(";")) {
-    const [key, value] = cookie.split("=").map((value) => value.trim());
+    const separatorIndex = cookie.indexOf("=");
+    const key = (separatorIndex === -1 ? cookie : cookie.slice(0, separatorIndex)).trim();
+    const value = (separatorIndex === -1 ? "" : cookie.slice(separatorIndex + 1)).trim();
+
     if (key === name) {
       return value.startsWith('"') && value.endsWith('"')
         ? value.slice(1, -1)
