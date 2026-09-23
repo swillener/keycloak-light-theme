@@ -50,13 +50,6 @@
             <link href="${url.resourcesPath}/${style}" rel="stylesheet" />
         </#list>
     </#if>
-    <script type="importmap">
-        {
-            "imports": {
-                "rfc4648": "${url.resourcesCommonPath}/vendor/rfc4648/rfc4648.js"
-            }
-        }
-    </script>
     <#if properties.scripts?has_content>
         <#list properties.scripts?split(' ') as script>
             <script src="${url.resourcesPath}/${script}" type="text/javascript"></script>

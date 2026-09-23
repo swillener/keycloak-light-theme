@@ -1,14 +1,14 @@
 # keycloak-light-theme
 
-Produktionsreifes helles Keycloak-Theme für **Keycloak 26.4.5** als **JAR-Datei**.
+Production-ready light Keycloak theme for **Keycloak 26.4.5** packaged as a **JAR**.
 
-## Inhalt
+## Included
 
-- Maven-Build für ein Theme-JAR
-- Login-Theme mit eigenem Freemarker-Template, CSS und JavaScript
-- Account-Theme mit heller Ladeoberfläche
-- Admin-Theme mit heller Ladeoberfläche
-- Gemeinsame Light-Styles für konsistente Farben, Fokuszustände und Abstände
+- Maven build for a theme JAR
+- Login theme with a custom Freemarker template, CSS, and JavaScript
+- Account theme with a light loading shell
+- Admin theme with a light loading shell
+- Shared light-theme styles for consistent colors, spacing, and focus states
 
 ## Build
 
@@ -16,22 +16,22 @@ Produktionsreifes helles Keycloak-Theme für **Keycloak 26.4.5** als **JAR-Datei
 mvn clean package
 ```
 
-Das erzeugte JAR liegt danach unter:
+The generated JAR will be available at:
 
 ```text
 target/keycloak-light-theme-1.0.0.jar
 ```
 
-## Installation in Keycloak 26.4.5
+## Install on Keycloak 26.4.5
 
-1. JAR in das Verzeichnis `providers/` der Keycloak-Installation kopieren
-2. Keycloak neu starten oder das Image neu bauen
-3. Das Theme in den Realm-Einstellungen auswählen:
+1. Copy the JAR into the Keycloak `providers/` directory
+2. Restart Keycloak or rebuild the container image
+3. Select the theme in the realm settings:
    - **Login Theme:** `light`
    - **Account Theme:** `light`
    - **Admin Console Theme:** `light`
 
-## Projektstruktur
+## Project structure
 
 ```text
 src/main/resources/
@@ -43,9 +43,9 @@ src/main/resources/
     └── login/
 ```
 
-## Hinweise
+## Notes
 
-- Das Login-Theme erweitert `keycloak.v2`
-- Das Account-Theme erweitert `keycloak.v3`
-- Das Admin-Theme erweitert `keycloak.v2`
-- Das Theme ist auf ein helles, responsives und barrierefreundliches Erscheinungsbild ausgelegt
+- The login theme extends `keycloak.v2`
+- The account theme extends `keycloak.v3`
+- The admin theme extends `keycloak.v2`
+- The design is intentionally light, responsive, and accessibility-friendly
