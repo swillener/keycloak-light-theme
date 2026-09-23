@@ -81,18 +81,18 @@
     <noscript>JavaScript is required to use the Account Console.</noscript>
     <script id="environment" type="application/json">
       {
-        "serverBaseUrl": "${serverBaseUrl?json_string}",
-        "authUrl": "${authUrl?json_string}",
-        "authServerUrl": "${authServerUrl?json_string}",
-        "realm": "${realm.name?json_string}",
-        "clientId": "${clientId?json_string}",
-        "resourceUrl": "${resourceUrl?json_string}",
-        "logo": "${(properties.logo!"")?json_string}",
-        "logoUrl": "${(properties.logoUrl!"")?json_string}",
-        "baseUrl": "${baseUrl?json_string}",
-        "locale": "${locale?string?json_string}",
-        "referrerName": "${(referrerName!"")?json_string}",
-        "referrerUrl": "${(referrer_uri!"")?json_string}",
+        "serverBaseUrl": ${serverBaseUrl?json_string},
+        "authUrl": ${authUrl?json_string},
+        "authServerUrl": ${authServerUrl?json_string},
+        "realm": ${realm.name?json_string},
+        "clientId": ${clientId?json_string},
+        "resourceUrl": ${resourceUrl?json_string},
+        "logo": ${(properties.logo!"")?json_string},
+        "logoUrl": ${(properties.logoUrl!"")?json_string},
+        "baseUrl": ${baseUrl?json_string},
+        "locale": ${locale?string?json_string},
+        "referrerName": ${(referrerName!"")?json_string},
+        "referrerUrl": ${(referrer_uri!"")?json_string},
         "features": {
           "isRegistrationEmailAsUsername": ${realm.registrationEmailAsUsername?c},
           "isEditUserNameAllowed": ${realm.editUsernameAllowed?c},
@@ -106,7 +106,7 @@
           "isViewGroupsEnabled": ${isViewGroupsEnabled?c},
           "isOid4VciEnabled": ${isOid4VciEnabled?c}
         },
-        "scope": "${(scope!"")?json_string}"
+        "scope": ${(scope!"")?json_string}
       }
     </script>
   </body>

@@ -81,18 +81,18 @@
     <noscript>JavaScript is required to use the Administration Console.</noscript>
     <script id="environment" type="application/json">
       {
-        "serverBaseUrl": "${serverBaseUrl?json_string}",
-        "adminBaseUrl": "${adminBaseUrl?json_string}",
-        "authUrl": "${authUrl?json_string}",
-        "authServerUrl": "${authServerUrl?json_string}",
-        "realm": "${(loginRealm!"master")?json_string}",
-        "clientId": "${clientId?json_string}",
-        "resourceUrl": "${resourceUrl?json_string}",
-        "logo": "${(properties.logo!"")?json_string}",
-        "logoUrl": "${(properties.logoUrl!"")?json_string}",
-        "consoleBaseUrl": "${consoleBaseUrl?json_string}",
-        "masterRealm": "${masterRealm?json_string}",
-        "resourceVersion": "${resourceVersion?json_string}"
+        "serverBaseUrl": ${serverBaseUrl?json_string},
+        "adminBaseUrl": ${adminBaseUrl?json_string},
+        "authUrl": ${authUrl?json_string},
+        "authServerUrl": ${authServerUrl?json_string},
+        "realm": ${(loginRealm!"master")?json_string},
+        "clientId": ${clientId?json_string},
+        "resourceUrl": ${resourceUrl?json_string},
+        "logo": ${(properties.logo!"")?json_string},
+        "logoUrl": ${(properties.logoUrl!"")?json_string},
+        "consoleBaseUrl": ${consoleBaseUrl?json_string},
+        "masterRealm": ${masterRealm?json_string},
+        "resourceVersion": ${resourceVersion?json_string}
       }
     </script>
   </body>
