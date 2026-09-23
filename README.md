@@ -6,9 +6,10 @@ Production-ready MyGvz Keycloak theme for **Keycloak 26.4.5** packaged as a **JA
 
 - Maven build for a theme JAR
 - Login theme with a custom Freemarker template, CSS, and JavaScript
-- Account theme with a MyGvz loading shell
-- Admin theme with a MyGvz loading shell
-- Shared MyGvz-theme styles for consistent colors, spacing, and focus states
+- Account theme with a light loading shell
+- Admin theme with a light loading shell
+- Shared light-theme styles for consistent colors, spacing, and focus states
+- Email theme with responsive HTML and text templates for Keycloak account and event notifications
 
 ## Build
 
@@ -41,6 +42,23 @@ src/main/resources/
     ├── admin/
     ├── account/
     ├── common/
+    ├── email/
     └── login/
-    └── email/
 ```
+
+## Email theme configuration
+
+The email theme reads branding and footer values from `/src/main/resources/theme/light/email/theme.properties`. You can adjust:
+
+- `kcEmailBrandName`
+- `kcEmailLogoUrl` and `kcEmailLogoWidth`
+- `kcEmailAccentColor` / `kcEmailAccentColorStrong`
+- `kcEmailSupportAddress`
+- `kcEmailFooterLink1..3Label` and `kcEmailFooterLink1..3Url`
+
+## Notes
+
+- The login theme extends `keycloak.v2`
+- The account theme extends `keycloak.v3`
+- The admin theme extends `keycloak.v2`
+- The design is intentionally light, responsive, and accessibility-friendly

@@ -6,7 +6,8 @@
         "login",
         "account",
         "admin",
-        "common"
+        "common",
+        "email"
       ]
     }
   ]
