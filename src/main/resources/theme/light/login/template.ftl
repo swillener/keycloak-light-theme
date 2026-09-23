@@ -206,7 +206,7 @@
           </#if>
 
           <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
-              <div class="${properties.kcAlertClass!} pf-m-${(message.type = 'error')?then('danger', message.type)}">
+              <div class="${properties.kcAlertClass!} pf-m-${(message.type == 'error')?then('danger', message.type)}">
                   <div class="${properties.kcAlertIconClass!}">
                       <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
                       <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
@@ -222,10 +222,10 @@
           <#if auth?has_content && auth.showTryAnotherWayLink()>
             <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post" novalidate="novalidate">
                 <input type="hidden" name="tryAnotherWay" value="on"/>
-                <a id="try-another-way" href="javascript:document.forms['kc-select-try-another-way-form'].requestSubmit()"
+                <button id="try-another-way" type="submit"
                     class="${properties.kcButtonSecondaryClass} ${properties.kcButtonBlockClass} ${properties.kcMarginTopClass}">
                       ${kcSanitize(msg("doTryAnotherWay"))?no_esc}
-                </a>
+                </button>
             </form>
           </#if>
 

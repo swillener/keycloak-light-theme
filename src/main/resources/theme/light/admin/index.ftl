@@ -38,16 +38,24 @@
       <script type="module" src="${devServerUrl}/@vite/client"></script>
       <script type="module" src="${devServerUrl}/src/main.tsx"></script>
     </#if>
-    <link rel="stylesheet" href="${resourceUrl}/css/light.css">
     <#if entryStyles?has_content>
       <#list entryStyles as style>
+        <link rel="stylesheet" href="${resourceUrl}/${style}">
+      </#list>
+    </#if>
+    <#if properties.styles?has_content>
+      <#list properties.styles?split(' ') as style>
         <link rel="stylesheet" href="${resourceUrl}/${style}">
       </#list>
     </#if>
     <#if entryScript?has_content>
       <script type="module" src="${resourceUrl}/${entryScript}"></script>
     </#if>
-    <script type="module" src="${resourceUrl}/js/light.js"></script>
+    <#if properties.scripts?has_content>
+      <#list properties.scripts?split(' ') as script>
+        <script type="module" src="${resourceUrl}/${script}"></script>
+      </#list>
+    </#if>
     <#if entryImports?has_content>
       <#list entryImports as import>
         <link rel="modulepreload" href="${resourceUrl}/${import}">
@@ -73,18 +81,18 @@
     <noscript>JavaScript is required to use the Administration Console.</noscript>
     <script id="environment" type="application/json">
       {
-        "serverBaseUrl": "${serverBaseUrl}",
-        "adminBaseUrl": "${adminBaseUrl}",
-        "authUrl": "${authUrl}",
-        "authServerUrl": "${authServerUrl}",
-        "realm": "${loginRealm!"master"}",
-        "clientId": "${clientId}",
-        "resourceUrl": "${resourceUrl}",
-        "logo": "${properties.logo!""}",
-        "logoUrl": "${properties.logoUrl!""}",
-        "consoleBaseUrl": "${consoleBaseUrl}",
-        "masterRealm": "${masterRealm}",
-        "resourceVersion": "${resourceVersion}"
+        "serverBaseUrl": "${serverBaseUrl?json_string}",
+        "adminBaseUrl": "${adminBaseUrl?json_string}",
+        "authUrl": "${authUrl?json_string}",
+        "authServerUrl": "${authServerUrl?json_string}",
+        "realm": "${(loginRealm!"master")?json_string}",
+        "clientId": "${clientId?json_string}",
+        "resourceUrl": "${resourceUrl?json_string}",
+        "logo": "${(properties.logo!"")?json_string}",
+        "logoUrl": "${(properties.logoUrl!"")?json_string}",
+        "consoleBaseUrl": "${consoleBaseUrl?json_string}",
+        "masterRealm": "${masterRealm?json_string}",
+        "resourceVersion": "${resourceVersion?json_string}"
       }
     </script>
   </body>

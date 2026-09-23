@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="${locale}">
+<html lang="${locale?string}">
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="${resourceCommonUrl}/img/favicon.ico">
@@ -38,16 +38,24 @@
       <script type="module" src="${devServerUrl}/@vite/client"></script>
       <script type="module" src="${devServerUrl}/src/main.tsx"></script>
     </#if>
-    <link rel="stylesheet" href="${resourceUrl}/css/light.css">
     <#if entryStyles?has_content>
       <#list entryStyles as style>
+        <link rel="stylesheet" href="${resourceUrl}/${style}">
+      </#list>
+    </#if>
+    <#if properties.styles?has_content>
+      <#list properties.styles?split(' ') as style>
         <link rel="stylesheet" href="${resourceUrl}/${style}">
       </#list>
     </#if>
     <#if entryScript?has_content>
       <script type="module" src="${resourceUrl}/${entryScript}"></script>
     </#if>
-    <script type="module" src="${resourceUrl}/js/light.js"></script>
+    <#if properties.scripts?has_content>
+      <#list properties.scripts?split(' ') as script>
+        <script type="module" src="${resourceUrl}/${script}"></script>
+      </#list>
+    </#if>
     <#if entryImports?has_content>
       <#list entryImports as import>
         <link rel="modulepreload" href="${resourceUrl}/${import}">
@@ -73,18 +81,18 @@
     <noscript>JavaScript is required to use the Account Console.</noscript>
     <script id="environment" type="application/json">
       {
-        "serverBaseUrl": "${serverBaseUrl}",
-        "authUrl": "${authUrl}",
-        "authServerUrl": "${authServerUrl}",
-        "realm": "${realm.name}",
-        "clientId": "${clientId}",
-        "resourceUrl": "${resourceUrl}",
-        "logo": "${properties.logo!""}",
-        "logoUrl": "${properties.logoUrl!""}",
-        "baseUrl": "${baseUrl}",
-        "locale": "${locale}",
-        "referrerName": "${referrerName!""}",
-        "referrerUrl": "${referrer_uri!""}",
+        "serverBaseUrl": "${serverBaseUrl?json_string}",
+        "authUrl": "${authUrl?json_string}",
+        "authServerUrl": "${authServerUrl?json_string}",
+        "realm": "${realm.name?json_string}",
+        "clientId": "${clientId?json_string}",
+        "resourceUrl": "${resourceUrl?json_string}",
+        "logo": "${(properties.logo!"")?json_string}",
+        "logoUrl": "${(properties.logoUrl!"")?json_string}",
+        "baseUrl": "${baseUrl?json_string}",
+        "locale": "${locale?string?json_string}",
+        "referrerName": "${(referrerName!"")?json_string}",
+        "referrerUrl": "${(referrer_uri!"")?json_string}",
         "features": {
           "isRegistrationEmailAsUsername": ${realm.registrationEmailAsUsername?c},
           "isEditUserNameAllowed": ${realm.editUsernameAllowed?c},
@@ -98,7 +106,7 @@
           "isViewGroupsEnabled": ${isViewGroupsEnabled?c},
           "isOid4VciEnabled": ${isOid4VciEnabled?c}
         },
-        "scope": "${scope!""}"
+        "scope": "${(scope!"")?json_string}"
       }
     </script>
   </body>
