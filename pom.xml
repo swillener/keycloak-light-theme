@@ -8,8 +8,8 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Keycloak Light Theme</name>
-    <description>Production-ready light theme for Keycloak 26.4.5</description>
+    <name>Keycloak MyGvz Theme</name>
+    <description>Production-ready MyGvz theme for Keycloak 26.4.5</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
